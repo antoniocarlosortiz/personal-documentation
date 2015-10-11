@@ -1,5 +1,7 @@
 ##FILENAME: /etc/nginx/sites-available/crescent_moon.conf
 
+Included here are notes to serve as guide on how NGINX works.
+
 ```
 upstream crescent_moon_app_server {
   # fail_timeout=0 means we always retry an upstream even if it failed
