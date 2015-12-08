@@ -16,7 +16,7 @@ A user by default does not have any authorization. You, as the root account, hav
 
 2. Now when you reach the <b>Attach Policy</b> step, look for <b>AmazonS3FullAccess</b> and select that. This will give you full access so you can do anything on S3.
 
-3. Click on the group you just created and click the <b>ADD Users to Group</b> button to add the user that you created on the first part.
+3. Click on the group you just created and click the <b>Add Users to Group</b> button to add the user that you created on the first part.
 
 ###Creating Buckets
 
