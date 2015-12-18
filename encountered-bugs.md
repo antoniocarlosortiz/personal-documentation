@@ -23,3 +23,5 @@
 * SQLAlchemy ```Timeout Error```: Some part of the code is creating too many sessions at the same time. Find and fix it.
 
 * When adding new folders or files, make sure to reinstall the app in the virtual env or else the flask environment will have a difficult time looking for folders and files
+
+####CRESCENT MOON INNOVATIONS INTERNATIONAL DJANGO E-COMMERCE SITE
