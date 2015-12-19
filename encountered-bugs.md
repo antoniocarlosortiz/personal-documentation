@@ -25,3 +25,5 @@
 * When adding new folders or files, make sure to reinstall the app in the virtual env or else the flask environment will have a difficult time looking for folders and files
 
 ####CRESCENT MOON INNOVATIONS INTERNATIONAL DJANGO E-COMMERCE SITE
+
+*Django memory leak with gunicorn: CPU usage is off the charts with just a simple app. add ```-max requests <number>``` where the number is the number of requests before the gunicorn worker restarts.
