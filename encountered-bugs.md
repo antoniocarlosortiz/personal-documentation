@@ -26,4 +26,4 @@
 
 ####CRESCENT MOON INNOVATIONS INTERNATIONAL DJANGO E-COMMERCE SITE
 
-*Django memory leak with gunicorn: CPU usage is off the charts with just a simple app. add ```-max requests <number>``` where the number is the number of requests before the gunicorn worker restarts.
+* Django memory leak with gunicorn: CPU usage is off the charts with just a simple app. add ```-max requests <number>``` where the number is the number of requests before the gunicorn worker restarts.
