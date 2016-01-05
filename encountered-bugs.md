@@ -27,3 +27,8 @@
 ####CRESCENT MOON INNOVATIONS INTERNATIONAL DJANGO E-COMMERCE SITE
 
 * Django memory leak with gunicorn: CPU usage is off the charts with just a simple app. add ```-max requests <number>``` where the number is the number of requests before the gunicorn worker restarts.
+
+
+####SPECTRUM ONE WEBSITE
+
+* On calling the list of a certain foreign model to a subject model in Django, Its better to just use related_name on the ForeignKey and then just use in the template: `{{ <main_model_name>.<related_name_used>.all }}`
