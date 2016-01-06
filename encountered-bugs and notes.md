@@ -22,7 +22,9 @@
 
 * SQLAlchemy ```Timeout Error```: Some part of the code is creating too many sessions at the same time. Find and fix it.
 
-* When adding new folders or files, make sure to reinstall the app in the virtual env or else the flask environment will have a difficult time looking for folders and files
+* When adding new folders or files, make sure to reinstall the app in the virtual env or else the flask environment will have a difficult time looking for folders and files.
+
+* Once Debug is false, Django will no longer handle static and media files. The production web server should take care of that (NGINX or Gunicorn)
 
 ####CRESCENT MOON INNOVATIONS INTERNATIONAL DJANGO E-COMMERCE SITE
 
