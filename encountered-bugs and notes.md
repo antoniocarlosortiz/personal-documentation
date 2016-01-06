@@ -1,4 +1,4 @@
-#MAJOR BUGS (That to took me a while to solve)
+#MAJOR BUGS (That to took me a while to solve) and other notes.
 
 ####FLASK API TEMPLATE
 * ```no module named shared libs``` while running alembic: virtualenv for web app must have not been started.
@@ -29,6 +29,8 @@
 * Django memory leak with gunicorn: CPU usage is off the charts with just a simple app. add ```-max requests <number>``` where the number is the number of requests before the gunicorn worker restarts.
 
 
-####SPECTRUM ONE WEBSITE
+####SPECTRUM ONE WEBSITE on Django
 
 * On calling the list of a certain foreign model to a subject model in Django, Its better to just use `related_name` on the ForeignKey and then just use in the template: `{{ <main_model_name>.<related_name_used>.all }}`
+
+* To know what SITE_ID does, click  [here](http://stackoverflow.com/questions/25468676/django-sites-model-what-is-and-why-is-site-id-1)
