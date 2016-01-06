@@ -34,3 +34,5 @@
 * On calling the list of a certain foreign model to a subject model in Django, Its better to just use `related_name` on the ForeignKey and then just use in the template: `{{ <main_model_name>.<related_name_used>.all }}`
 
 * To know what SITE_ID does, click  [here](http://stackoverflow.com/questions/25468676/django-sites-model-what-is-and-why-is-site-id-1)
+
+* The `SECRET_KEY` on settings.py is used as salt mainly for csrf_token and cookie generation. More info [here](http://stackoverflow.com/questions/25468676/django-sites-model-what-is-and-why-is-site-id-1)
