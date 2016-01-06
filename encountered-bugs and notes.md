@@ -24,12 +24,10 @@
 
 * When adding new folders or files, make sure to reinstall the app in the virtual env or else the flask environment will have a difficult time looking for folders and files.
 
-* Once Debug is false, Django will no longer handle static and media files. The production web server should take care of that (NGINX or Gunicorn)
 
 ####CRESCENT MOON INNOVATIONS INTERNATIONAL DJANGO E-COMMERCE SITE
 
 * Django memory leak with gunicorn: CPU usage is off the charts with just a simple app. add ```-max requests <number>``` where the number is the number of requests before the gunicorn worker restarts.
-
 
 ####SPECTRUM ONE WEBSITE on Django
 
@@ -38,3 +36,5 @@
 * To know what SITE_ID does, click  [here](http://stackoverflow.com/questions/25468676/django-sites-model-what-is-and-why-is-site-id-1).
 
 * The `SECRET_KEY` on settings.py is used as salt mainly for csrf_token and cookie generation. More info [here](http://stackoverflow.com/questions/25468676/django-sites-model-what-is-and-why-is-site-id-1).
+
+* Once Debug is false, Django will no longer handle static and media files. The production web server should take care of that (NGINX or Gunicorn)
