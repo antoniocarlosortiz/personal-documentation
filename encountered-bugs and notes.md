@@ -38,3 +38,6 @@
 * The `SECRET_KEY` on settings.py is used as salt mainly for csrf_token and cookie generation. More info [here](http://stackoverflow.com/questions/25468676/django-sites-model-what-is-and-why-is-site-id-1).
 
 * Once Debug is false, Django will no longer handle static and media files. The production web server should take care of that (NGINX or Gunicorn)
+
+####Texting System using Django
+* On supposed memory leaks caused by Django, read [this](http://blog.gingerlime.com/2011/django-memory-leaks-part-i/)
