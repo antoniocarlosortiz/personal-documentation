@@ -25,7 +25,7 @@
 * When adding new folders or files, make sure to reinstall the app in the virtual env or else the flask environment will have a difficult time looking for folders and files.
 
 
-####CRESCENT MOON INNOVATIONS INTERNATIONAL DJANGO E-COMMERCE SITE
+####DJANGO E-COMMERCE SITE
 
 * Django memory leak with gunicorn: CPU usage is off the charts with just a simple app. add ```-max requests <number>``` where the number is the number of requests before the gunicorn worker restarts.
 
@@ -33,11 +33,18 @@
 
 * On calling the list of a certain foreign model to a subject model in Django, Its better to just use `related_name` on the ForeignKey and then just use in the template: `{{ <main_model_name>.<related_name_used>.all }}`
 
-* To know what SITE_ID does, click  [here](http://stackoverflow.com/questions/25468676/django-sites-model-what-is-and-why-is-site-id-1).
+* To know what SITE_ID does: [http://stackoverflow.com/questions/25468676/django-sites-model-what-is-and-why-is-site-id-1](http://stackoverflow.com/questions/25468676/django-sites-model-what-is-and-why-is-site-id-1).
 
-* The `SECRET_KEY` on settings.py is used as salt mainly for csrf_token and cookie generation. More info [here](http://stackoverflow.com/questions/25468676/django-sites-model-what-is-and-why-is-site-id-1).
+* The `SECRET_KEY` on settings.py is used as salt mainly for csrf_token and cookie generation. Related link:  [http://stackoverflow.com/questions/15170637/effects-of-changing-djangos-secret-key](http://stackoverflow.com/questions/15170637/effects-of-changing-djangos-secret-key).
 
 * Once Debug is false, Django will no longer handle static and media files. The production web server should take care of that (NGINX or Gunicorn)
 
 ####Texting System using Django
-* On supposed memory leaks caused by Django, read [this](http://blog.gingerlime.com/2011/django-memory-leaks-part-i/)
+* On supposed memory leaks caused by Django: [http://blog.gingerlime.com/2011/django-memory-leaks-part-i/](http://blog.gingerlime.com/2011/django-memory-leaks-part-i/)
+
+####Using Django with SQLite3 inside Vagrant using NFS as the file sharing system
+* NFS semantics are different than regular filesystems and does not play well with sqlite3. If you still try to use it though, `runserver` will take a while but will eventually load to a `database is locked` error.
+
+ Source:
+  * [http://stackoverflow.com/questions/9907429/locking-sqlite-file-on-nfs-filesystem-possible](http://stackoverflow.com/questions/9907429/locking-sqlite-file-on-nfs-filesystem-possible)
+  * [https://www.sqlite.org/faq.html](https://www.sqlite.org/faq.html)
