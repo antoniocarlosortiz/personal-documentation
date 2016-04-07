@@ -1,4 +1,4 @@
-#MAJOR BUGS (That to took me a while to solve) and other notes.
+#Bugs that to took me a while to solve and other notes.
 
 ####FLASK API TEMPLATE
 * ```no module named shared libs``` while running alembic: virtualenv for web app must have not been started.
@@ -48,3 +48,7 @@
  Source:
   * [http://stackoverflow.com/questions/9907429/locking-sqlite-file-on-nfs-filesystem-possible](http://stackoverflow.com/questions/9907429/locking-sqlite-file-on-nfs-filesystem-possible)
   * [https://www.sqlite.org/faq.html](https://www.sqlite.org/faq.html)
+  * 
+  
+####Generic Django Site
+* Problem loading fixtures; Error saying Django could not find `contrib.auth.models.User`: Load the user fixture first then load all the other fixtures next. Apparently Django loads fixtures async. 
