@@ -1,8 +1,15 @@
 #Django Best Practices
 <i>because I keep forgetting to use these.</i>
 
-###settings.py
+##settings.py
 * always use environment variables; if it gets tedious always writing those, you can place it in the activate script of the virtualenv youre using.
+* on creating **SECRET_KEY**
+```python
+import os
+import random
+
+SECRET_KEY = os.environ.get("SECRET_KEY", "".join(random.choice(string.printable) for i in range(40)))
+```
 * Handle missing secret key Exception using this:
 ```python
 import os
@@ -15,7 +22,7 @@ def get_env_variable(var_name):
         error_msg = "Set the {} environment variable.".format(var_name)
         raise ImproperlyConfigured(error_msg)
 ```
-* On defining BASE_DIR like setting, use the package `Unipath`
+* On defining BASE_DIR like setting, use the package [Unipath](https://github.com/mikeorr/Unipath)
 ```python
 from unipath import Path
 
@@ -26,7 +33,14 @@ STATICFILES_DIRS = (
     BASE_DIR.child("assets"),
 )
 ```
-###models.py
+* use package [dj_database_url](https://github.com/kennethreitz/dj-database-url) for creating db urls.
+```python
+DATABASES = {
+    'default': dj_database_url.config(default="postgres:///channels-example", conn_max_age=500)
+}
+```
+
+##models.py
 * Create Generic TimeStampeModel to be inherited by almost all modules
 ```python
 #core/models.py
@@ -70,7 +84,17 @@ Usage:
 1
 """
 ```
+##urls.py
+* Don't reference views as strings in URLConfs. Adds magic methods and is hard to debug. Its also weird; define views explicitly.
+```python
+from django.conf.urls import url
 
+from . import views
+
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+]
+```
 
 
 ###Source
