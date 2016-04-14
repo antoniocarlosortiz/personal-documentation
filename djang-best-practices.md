@@ -75,14 +75,14 @@ class FlavorReview(models.Model):
     # add our custom model manager
     objects = PublishedManager()
 
-"""    
+```
+```python
 Usage:
 >>> from reviews.models import FlavorReview
 >>> FlavorReview.objects.count()
 3
 >>> FlavorReview.objects.published().count()
 1
-"""
 ```
 ##urls.py
 * Don't reference views as strings in URLConfs. Adds magic methods and is hard to debug. Its also weird; define views explicitly.
