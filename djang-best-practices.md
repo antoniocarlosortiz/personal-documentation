@@ -95,7 +95,16 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
 ]
 ```
+###views.py
+* use **transanctions** whenever creating, updating, or deleting something from the database. This maintains database integrity.
+```python
+from django.db import transaction
 
+with transaction.atomic():
+    flavor.status = status
+    flavor.latest_status = timezone.now()
+    flavor.save()
+```
 
 ###Source
 [http://www.twoscoopspress.com/](http://www.twoscoopspress.com/)
