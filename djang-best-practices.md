@@ -26,3 +26,19 @@ STATICFILES_DIRS = (
     BASE_DIR.child("assets"),
 )
 ```
+###models.py
+* Create Generic TimeStampeModel to be inherited by almost all modules
+```
+#core/models.py
+from django.db import models
+
+class TimeStampedModel(models.Model):
+    """
+    An abstract base class model that provides self-updating ``created`` and ``modified`` fields
+    """
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeFIeld(auto_now=True)
+    
+    class Meta:
+        abstract = True
+```
