@@ -48,7 +48,6 @@
  Source:
   * [http://stackoverflow.com/questions/9907429/locking-sqlite-file-on-nfs-filesystem-possible](http://stackoverflow.com/questions/9907429/locking-sqlite-file-on-nfs-filesystem-possible)
   * [https://www.sqlite.org/faq.html](https://www.sqlite.org/faq.html)
-  * 
   
 ####Generic Django Site
 * Problem loading fixtures; Error saying Django could not find `contrib.auth.models.User`: Load the user fixture first then load all the other fixtures next. Apparently Django loads fixtures async. 
