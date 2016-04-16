@@ -2,7 +2,7 @@
 
 Included here are notes to serve as guide on how NGINX works.
 
-```
+```bash
 upstream crescent_moon_app_server {
   # fail_timeout=0 means we always retry an upstream even if it failed
   # to return a good HTTP response (in case the Unicorn master nukes a
