@@ -122,7 +122,7 @@ A better way to run gunicorn is from bash script. That way it can easily be run 
 
 
 create a text file: ```nano gunicorn_start```
-```
+```bash
 #!/bin/bash
 
 NAME="gunicorn_nae"                                                                     # name of the application
@@ -159,7 +159,7 @@ To install Supervisor: ```sudo apt-get install supervisor```
 to create a configuration file: ``` sudo nano /etc/supervisor/conf.d/<name_of_project>.conf```
 
 Include the commands that are supposed to be ran inside the conf file:
-```
+```bash
 [program:gunicorn]
 command = /path/to/app/scripts/gunicorn_start                                         ; Command to start app.
 stdout_logfile = /path/to/app/logs/gunicorn_supervisor.log                            ; Where to write log. messages
@@ -171,7 +171,7 @@ To check if the config have changed: ```sudo supervisorctl reread```
 to run the update of the project (and then running them): ```sudo suprvisorctl update```
 
 You can also check the status of your app or start, stop and restart using supervisor:
-```
+```bash
 $ sudo supervisorctl status hello                       
 hello                            RUNNING    pid 18020, uptime 0:00:50
 $ sudo supervisorctl stop hello  
@@ -182,8 +182,3 @@ $ sudo supervisorctl restart hello
 hello: stopped
 hello: started
 ```
-
-#TO BE ADDED SOON..
-* ~~create a bash script for gunicorn~~
-* ~~use supervisor~~
-* ~~using supervisor with virtualenvs~~
